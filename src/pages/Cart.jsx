@@ -12,17 +12,19 @@ const Cart = ({ cartItems, addToCart, removeFromCart }) => {
 
   return (
     <>
-      <div>
-        <div className="alert alert-error bg-base-100 m-12 text-white font-normal justify-center m-8">
-          <p className="font-bold text-white text-xl p-2">Your cart is empty.</p>
+      {cartItems.length === 0 && (
+        <div>
+          <div className="alert alert-error bg-base-100 m-12 text-white font-normal justify-center m-8">
+            <p className="font-bold text-white text-xl p-2">Your cart is empty.</p>
+          </div>
+          <div className="card-actions justify-end mr-12">
+            <button onClick={() => navigate(-1)} className="btn btn-primary">
+              {' '}
+              ← Go back
+            </button>
+          </div>
         </div>
-        <div className="card-actions justify-end mr-12">
-          <button onClick={() => navigate(-1)} className="btn btn-primary">
-            {' '}
-            ← Go back
-          </button>
-        </div>
-      </div>
+      )}
       {cartItems.length > 0 && (
         <div className="m-8">
           <div className="overflow-x-auto">
