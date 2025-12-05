@@ -3,8 +3,9 @@
 This is a web application built with React, Vite, Tailwind and Daisyui
 
 The application is deployed with Render and it can be accessed directly
+@ https://wbs-fake-e-commerce-react.onrender.com/
 
-## Requirements
+## Description
 
 - multi-page application fetching data from https://fakestoreapi.com/
 - implements a local storage for saving products
